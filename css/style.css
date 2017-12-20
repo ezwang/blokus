@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Acme);
+body {
+    background: url("../img/background.png");
+    font-family: 'Acme', sans-serif;
+}
+h1 {
+    text-align:center;
+}
+#board td {
+    width:32px;
+    height:32px;
+    background-color:#ccc;
+    padding:0px;
+    margin:1px;
+    opacity:0.8;
+}
+#game {
+    display:none;
+}
+#info {
+    display:none;
+    position:fixed;
+    top:15px;
+    right:15px;
+    padding:10px;
+    border-radius:5px;
+    background-color:rgba(64, 64, 64, 0.5);
+    min-width:200px;
+    z-index:1;
+}
+#menu {
+    background-color:rgba(256, 256, 256, 0.8);
+    z-index:1;
+    padding:15px;
+    border-radius:5px;
+    width:500px;
+    margin:0 auto;
+}
+#info .title {
+    font-weight:bold;
+    text-align:center;
+}
+#info .player {
+    font-size:16px;
+    line-height:24px;
+}
+#info table {
+    width:100%;
+}
+.player.red {
+    color:red;
+}
+.player.yellow {
+    color:yellow;
+}
+.player.green {
+    color:green;
+}
+.player.blue {
+    color:blue;
+}
+.player.current {
+    font-weight:bold;
+}
+.player .score {
+    text-align:right;
+}
+#board td.corner {
+    background-color:#aaa;
+}
+#board td.red, .piece.red .block {
+    background-color:red;
+}
+#board td.yellow, .piece.yellow .block {
+    background-color:yellow;
+}
+#board td.blue, .piece.blue .block {
+    background-color:blue;
+}
+#board td.green, .piece.green .block {
+    background-color:green;
+}
+#board {
+    background-color:#ddd;
+    padding:5px;
+    margin:0 auto;
+}
+#pieces {
+    background-color:rgba(101, 67, 33, 0.8);
+    border-radius:5px;
+    width:640px;
+    margin:10px auto;
+    padding:10px;
+    min-height:100px;
+}
+.piece {
+    position:relative;
+    float:left;
+    padding-right:10px;
+    padding-bottom:10px;
+}
+.block {
+    position:absolute;
+    width:32px;
+    height:32px;
+    background-color:#ccc;
+    margin:1px;
+    opacity:0.8;
+}
+#keys {
+    margin:10px;
+    text-align:center;
+    font-size:12px;
+}
+#keys kbd {
+    color:white;
+    background-color:black;
+    padding:2px;
+    border-radius:2px;
+    font-family:consolas,monospace;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+input#username {
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    text-align:center;
+    width:200px;
+    display:block;
+    margin:10px auto;
+    font-size:16px;
+}
+input#username.error {
+    border-color:red;
+}
+input:focus {
+    outline:0;
+}
+button#start {
+    background: #3498db;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    border:none;
+    border-radius:5px;
+    padding:10px;
+    color:white;
+    font-size:20px;
+    text-decoration:none;
+    display:block;
+    width:200px;
+    margin:0px auto;
+    font-family:inherit;
+}
+button#start.leave {
+    background: red;
+    background-image: linear-gradient(to bottom, #c00, #900);
+}
+#loading {
+    display:none;
+    text-align:center;
+}
+#player-blocks span {
+    display:inline-block;
+    width:24px;
+    height:24px;
+    background-color:#ccc;
+    margin:5px;
+    margin-top:15px;
+}
+#player-blocks span.filled {
+    background-color:blue;
+}
+#chat {
+    display:none;
+    position:fixed;
+    bottom:15px;
+    right:15px;
+    padding:5px;
+    background-color:rgba(64, 64, 64, 0.5);
+    width:200px;
+    z-index:1;
+}
+#chat-output {
+    width:100%;
+    overflow-y:scroll;
+    background:white;
+    height:300px;
+    padding:2px;
+    box-sizing:border-box;
+}
+#chat-output div {
+    word-wrap:break-word;
+    font-size:12px;
+}
+#chat-output div:nth-child(odd) {
+    background-color:#eee;
+}
+#chat-input {
+    width:100%;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+    font-family:inherit;
+    margin-top:2px;
+}
+#menu p {
+    margin-top:0px;
+    text-align:center;
+}
+img#sample {
+    display:block;
+    width:300px;
+    height:300px;
+    margin:10px auto;
+}
+.your-turn {
+    box-shadow:0px 0px 10px black;
+}

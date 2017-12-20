@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Blokus</title>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1 id="title">Blokus</h1>
+        <div id="info">
+            <div class="title">Scoreboard</div>
+            <table>
+                <tr class="player blue"><td class="name">Player</td><td class="score">0</td></tr>
+                <tr class="player yellow"><td class="name">Player</td><td class="score">0</td></tr>
+                <tr class="player red"><td class="name">Player</td><td class="score">0</td></tr>
+                <tr class="player green"><td class="name">Player</td><td class="score">0</td></tr>
+            </table>
+        </div>
+        <div id="chat">
+            <div id="chat-output"></div>
+            <input id="chat-input" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" />
+        </div>
+        <div id="menu">
+            <img id="sample" src="img/sample.png" />
+            <p>Blokus is played on a 20x20 board. Everyone gets 21 shapes to place. Players play in a clockwise or counterclockwise rotation, with every player placing down 1 piece each turn. On the first turn players must place their pieces in the corners. Subsequent pieces must be played with only corner to corner contact with their own pieces. When a player cannot place a piece, he or she passes, and play continues. The game ends when no one can place a piece.</p>
+            <div id="loading">
+                <i class="fa fa-spin fa-cog"></i> Searching for a match...<br />
+                <div id="player-blocks">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <input type="text" id="username" placeholder="Your Name" autocomplete="off" maxlength="32" />
+            <button id="start">Start</button>
+        </div>
+        <div id="game">
+            <table id="board"></table>
+            <div id="keys"><kbd>R</kbd> Rotate - <kbd>F</kbd> Flip<span id="skip-container"> - <a href="#" id="skip">Skip Turn</a></div>
+            <div id="pieces" class="clearfix"></div>
+        </div>
+    </body>
+</html>
